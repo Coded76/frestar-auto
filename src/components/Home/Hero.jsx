@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { MdMenu, MdClose } from "react-icons/md";
@@ -10,6 +11,9 @@ const Hero = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const pathName = usePathname();
+
+  console.log(pathName);
   return (
     <div className=" lg:h-[140vh] bg-[#edf3fe]">
       {/* Navigation  */}
@@ -25,10 +29,38 @@ const Hero = () => {
                 className="w-[200px]"
               />
               <ul className="hidden lg:flex items-center gap-[40px] text-[16px] font-medium text-[#FFFFFF]">
-                <li>Home</li>
-                <li>Buy</li>
-                <li>Sell</li>
-                <li>Contact Us</li>
+                <Link href={"/"} className=" flex flex-col items-center">
+                  <p>Home</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 md:block hidden ${
+                      pathName === "/" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/buy"} className=" flex flex-col items-center">
+                  <p>Buy</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${
+                      pathName === "/buy" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/sell"} className=" flex flex-col items-center">
+                  <p>Sell</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${
+                      pathName === "/sell" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/contact"} className=" flex flex-col items-center">
+                  <p>Contact Us</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800  hidden ${
+                      pathName === "/contact" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
               </ul>
             </div>
           </div>

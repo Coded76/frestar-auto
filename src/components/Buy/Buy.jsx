@@ -211,6 +211,7 @@ import {
 import { CiSearch } from "react-icons/ci";
 import { MdMenu, MdClose } from "react-icons/md";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const cars = Array(6).fill({
   title: "2014 Mercedes Benz C63 AMG Edition 507",
@@ -268,6 +269,8 @@ export default function Buy() {
     });
   };
 
+  const pathName = usePathname();
+
   return (
     <div className="bg-[#edf3fe]">
       {/* Navigation */}
@@ -283,10 +286,38 @@ export default function Buy() {
                 className="w-[200px]"
               />
               <ul className="hidden lg:flex items-center gap-[40px] text-[16px] font-medium text-[#FFFFFF]">
-                <li>Home</li>
-                <li>Buy</li>
-                <li>Sell</li>
-                <li>Contact Us</li>
+                <Link href={"/"} className=" flex flex-col items-center">
+                  <p>Home</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${
+                      pathName === "/" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/buy"} className=" flex flex-col items-center">
+                  <p>Buy</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 ${
+                      pathName === "/buy" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/sell"} className=" flex flex-col items-center">
+                  <p>Sell</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800  ${
+                      pathName === "/sell" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/contact"} className=" flex flex-col items-center">
+                  <p>Contact Us</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 ${
+                      pathName === "/contact" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
               </ul>
             </div>
           </div>
