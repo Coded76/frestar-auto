@@ -491,7 +491,7 @@ export default function Buy() {
                         <span className="font-medium">{car.drive}</span>
                       </div>
                     </div>
-                    <Link href={`/cars/${idx}`}>
+                    <Link href={`/buy/cardetails/${idx}`}>
                       <button className="mt-4 w-full bg-black text-white py-2 rounded-md text-sm hover:bg-gray-800 transition-colors">
                         View Details
                       </button>

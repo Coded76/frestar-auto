@@ -6,6 +6,7 @@ import { FaUser, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,10 +39,38 @@ export default function ContactPage() {
                 className="w-[200px]"
               />
               <ul className="hidden lg:flex items-center gap-[40px] text-[16px] font-medium text-[#FFFFFF]">
-                <li>Home</li>
-                <li>Buy</li>
-                <li>Sell</li>
-                <li>Contact Us</li>
+                <Link href={"/"} className=" flex flex-col items-center">
+                  <p>Home</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${
+                      pathName === "/" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/buy"} className=" flex flex-col items-center">
+                  <p>Buy</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 ${
+                      pathName === "/buy" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/sell"} className=" flex flex-col items-center">
+                  <p>Sell</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800  ${
+                      pathName === "/sell" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
+                <Link href={"/contact"} className=" flex flex-col items-center">
+                  <p>Contact Us</p>
+                  <div
+                    className={`w-[60px] h-[4px] bg-blue-800 ${
+                      pathName === "/contact" ? "block" : "hidden"
+                    }`}
+                  ></div>
+                </Link>
               </ul>
             </div>
           </div>
@@ -113,7 +142,7 @@ export default function ContactPage() {
           </div>
         )}
       </div>
-      <div className="flex flex-col bgImage w-[1324px] relative lg:top-[-14rem] h-[453px] bg-red-600 rounded-[24px] text-white px-[56px] justify-center">
+      <div className="flex flex-col bgImage w-[1324px] relative lg:top-[-14rem] h-[453px] rounded-[24px] text-white px-[56px] justify-center">
         {/* <div className={styles.bgImage}> */}
         <h2 className="text-[64px] font-bold">Get in touch</h2>
         <p className="text-[32px] font-normal w-[1038px]">
@@ -158,7 +187,6 @@ export default function ContactPage() {
                 />
               </div>
             </div>
-
             <div className="flex flex-col gap-[4px]">
               <label className="block text-[14px] font-medium text-gray-700 mb-1">
                 Email Address <span className="text-green-500">*</span>
