@@ -20,10 +20,10 @@ const carData = new Array(4).fill({
 
 const Collection = () => {
   return (
-    <div className="min-h-screen bg-white px-[5rem] py-10">
+    <div className="min-h-screen bg-white lg:px-[5rem] px-[20px] py-10">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-[#0A1D56]">Our Collections</h2>
+        <h2 className="lg:text-[63px] text-[30px] font-bold text-[#0A1D56]">Our Collections</h2>
         <button className="text-sm font-medium text-[#0A1D56] border border-[#0A1D56] px-4 py-2 rounded-full flex items-center gap-1 hover:bg-[#0A1D56] hover:text-white transition">
           See All
           <ArrowUpRight size={16} />
@@ -37,7 +37,7 @@ const Collection = () => {
         <button className="text-gray-500 pb-2">Accessories</button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 w-full lg:grid-cols-4 xl:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-[20px] lg:grid-cols-4 xl:grid-cols-4">
         {carData.map((car, index) => (
           <div
             key={index}

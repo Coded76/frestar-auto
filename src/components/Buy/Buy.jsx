@@ -289,33 +289,29 @@ export default function Buy() {
                 <Link href={"/"} className=" flex flex-col items-center">
                   <p>Home</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${
-                      pathName === "/" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${pathName === "/" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
                 <Link href={"/buy"} className=" flex flex-col items-center">
                   <p>Buy</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800 ${
-                      pathName === "/buy" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/buy" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
                 <Link href={"/sell"} className=" flex flex-col items-center">
                   <p>Sell</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800  ${
-                      pathName === "/sell" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800  ${pathName === "/sell" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
                 <Link href={"/contact"} className=" flex flex-col items-center">
                   <p>Contact Us</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800 ${
-                      pathName === "/contact" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/contact" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
               </ul>
@@ -338,11 +334,10 @@ export default function Buy() {
         {isMenuOpen && (
           <div
             className={`lg:hidden flex flex-col gap-2 items-start bg-[#F6F6F6] w-full px-[20px] py-[10px] absolute top-[100px] left-0 z-40 transition-all duration-300 ease-in-out 
-                      ${
-                        isMenuOpen
-                          ? "opacity-100 top-[80px]"
-                          : "opacity-0 top-[60px]"
-                      }`}
+                      ${isMenuOpen
+                ? "opacity-100 top-[80px]"
+                : "opacity-0 top-[60px]"
+              }`}
           >
             <ul className="flex flex-col gap-6">
               <li>Home</li>
@@ -360,11 +355,11 @@ export default function Buy() {
         )}
       </div>
 
-      <div className="bg-white relative lg:top-[-14rem] pt-[4rem] pl-[1rem] px-3 lg:mx-[5%] rounded-4xl min-h-screen">
-        <h1 className="text-[48px] font-bold mb-6">All Listings</h1>
+      <div className="bg-white  relative lg:top-[-14rem] pt-[4rem] pl-[1rem] px-3 lg:mx-[5%] rounded-4xl min-h-screen">
+        <h1 className="lg:text-[48px] text-[24px] font-bold mb-6">All Listings</h1>
         <div className="flex">
           {/* Sidebar Filters */}
-          <div className="w-full max-w-xs p-4 space-y-4">
+          <div className="w-full max-w-xs p-4 hidden lg:block space-y-4">
             <div className="flex justify-between items-center">
               <h2 className="text-sm font-semibold text-gray-700">Filters</h2>
               <button className="text-xs text-blue-600 hover:underline">
@@ -455,18 +450,17 @@ export default function Buy() {
                                     [idx]: dotIdx,
                                   }));
                                 }}
-                                className={`w-2 h-2 rounded-full transition-all ${
-                                  dotIdx === currentImageIndex
+                                className={`w-2 h-2 rounded-full transition-all ${dotIdx === currentImageIndex
                                     ? "bg-blue-500 w-3"
                                     : "bg-white bg-opacity-50"
-                                }`}
+                                  }`}
                               />
                             ))}
                           </div>
                         </>
                       )}
                     </div>
-                    <span className="text-xs px-2 py-1 absolute top-[17%] bg-blue-100 text-blue-600 rounded">
+                    <span className="text-xs px-2 py-1 absolute lg:top-[17%] top-[-17%] bg-blue-100 text-blue-600 rounded">
                       Car
                     </span>
                     <h3 className="text-lg font-semibold mt-2 line-clamp-2">
@@ -491,7 +485,7 @@ export default function Buy() {
                         <span className="font-medium">{car.drive}</span>
                       </div>
                     </div>
-                    <Link href={`/buy/cardetails/${idx}`}>
+                    <Link href={`/buy/cars/${idx}`}>
                       <button className="mt-4 w-full bg-black text-white py-2 rounded-md text-sm hover:bg-gray-800 transition-colors">
                         View Details
                       </button>

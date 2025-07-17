@@ -103,12 +103,12 @@ const Hero = () => {
         )}
       </div>
       {/* Hero Section */}
-      <div className="w-full  relative lg:top-[-14rem] flex items-center flex-col justify-center px-[40px]">
+      <div className="w-full  relative lg:top-[-14rem] flex items-center flex-col justify-center lg:px-[40px]">
         <div className="w-full bg-[#3B82F6] rounded-4xl">
-          <div className="bg-[url(/home.svg)] bg-cover bg-center w-full h-[800px] rounded-4xl flex items-end justify-start p-[5rem]">
+          <div className="bg-[url(/home.svg)] bg-cover bg-center w-full lg:h-[800px] h-[400px] lg:rounded-4xl flex items-center lg:items-end justify-start px-2 lg:p-[5rem]">
             <div className="flex flex-col gap-[20px]">
-              <p className="font-bold text-white md:text-[64px] leading-none text-2xl">
-                Drive Your Dream Car <br /> with Frestar Autos
+              <p className="font-bold text-white md:text-[64px] lg:text-[64px] te leading-none text-2xl">
+                Drive Your Dream Car <br className="hidden lg:block"/> with Frestar Autos
               </p>
               <p className="md:text-[32px] text-white leading-none">
                 Discover premium cars, accessories, and <br /> financing options

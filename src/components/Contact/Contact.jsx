@@ -42,33 +42,29 @@ export default function ContactPage() {
                 <Link href={"/"} className=" flex flex-col items-center">
                   <p>Home</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${
-                      pathName === "/" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800 hidden ${pathName === "/" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
                 <Link href={"/buy"} className=" flex flex-col items-center">
                   <p>Buy</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800 ${
-                      pathName === "/buy" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/buy" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
                 <Link href={"/sell"} className=" flex flex-col items-center">
                   <p>Sell</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800  ${
-                      pathName === "/sell" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800  ${pathName === "/sell" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
                 <Link href={"/contact"} className=" flex flex-col items-center">
                   <p>Contact Us</p>
                   <div
-                    className={`w-[60px] h-[4px] bg-blue-800 ${
-                      pathName === "/contact" ? "block" : "hidden"
-                    }`}
+                    className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/contact" ? "block" : "hidden"
+                      }`}
                   ></div>
                 </Link>
               </ul>
@@ -91,44 +87,39 @@ export default function ContactPage() {
         </div>
         {isMenuOpen && (
           <div
-            className={`lg:hidden flex flex-col gap-2 items-start bg-[#F6F6F6] w-full px-[20px] py-[10px] absolute top-[100px] left-0 z-40 transition-all duration-300 ease-in-out 
-                          ${
-                            isMenuOpen
-                              ? "opacity-100 top-[80px]"
-                              : "opacity-0 top-[60px]"
-                          }`}
+            className={`lg:hidden flex flex-col gap-2 items-start bg-[#F6F6F6] w-full px-[20px] py-[10px] absolute top-[17%] left-0 z-40 transition-all duration-300 ease-in-out 
+                          ${isMenuOpen
+                ? "opacity-100 top-[80px]"
+                : "opacity-0 top-[60px]"
+              }`}
           >
             <ul className="hidden lg:flex items-center gap-[40px] text-[16px] font-medium text-[#FFFFFF]">
               <Link href={"/"} className=" flex flex-col items-center">
                 <p>Home</p>
                 <div
-                  className={`w-[60px] h-[4px] bg-blue-800 ${
-                    pathName === "/" ? "block" : "hidden"
-                  }`}
+                  className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/" ? "block" : "hidden"
+                    }`}
                 ></div>
               </Link>
               <Link href={"/buy"} className=" flex flex-col items-center">
                 <p>Buy</p>
                 <div
-                  className={`w-[60px] h-[4px] bg-blue-800  ${
-                    pathName === "/buy" ? "block" : "hidden"
-                  }`}
+                  className={`w-[60px] h-[4px] bg-blue-800  ${pathName === "/buy" ? "block" : "hidden"
+                    }`}
                 ></div>
               </Link>
               <Link href={"/sell"} className=" flex flex-col items-center">
                 <p>Sell</p>
                 <div
-                  className={`w-[60px] h-[4px] bg-blue-800 ${
-                    pathName === "/sell" ? "block" : "hidden"
-                  }`}
+                  className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/sell" ? "block" : "hidden"
+                    }`}
                 ></div>
               </Link>
               <Link href={"/contact"} className=" flex flex-col items-center">
                 <p>Contact Us</p>
                 <div
-                  className={`w-[60px] h-[4px] bg-blue-800  hidden ${
-                    pathName === "/contact" ? "block" : "hidden"
-                  }`}
+                  className={`w-[60px] h-[4px] bg-blue-800  hidden ${pathName === "/contact" ? "block" : "hidden"
+                    }`}
                 ></div>
               </Link>
             </ul>
@@ -142,25 +133,25 @@ export default function ContactPage() {
           </div>
         )}
       </div>
-      <div className="flex flex-col bgImage w-[1324px] relative lg:top-[-14rem] h-[453px] rounded-[24px] text-white px-[56px] justify-center">
+      <div className="flex flex-col bgImage lg:w-[1324px] w-full relative lg:top-[-14rem] h-[453px] lg:rounded-[24px] text-white lg:px-[56px] px-[15px] justify-center">
         {/* <div className={styles.bgImage}> */}
-        <h2 className="text-[64px] font-bold">Get in touch</h2>
-        <p className="text-[32px] font-normal w-[1038px]">
+        <h2 className="lg:text-[64px] text-[30px] font-bold">Get in touch</h2>
+        <p className="lg:text-[32px] text-[20px] font-normal w-full lg:w-[1038px]">
           Whether you have a question, need support, or just want to get in
           touch, we’d love to hear from you.
         </p>
         {/* </div> */}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-10 px-8 md:px-20 pb-16">
+      <div className="grid md:grid-cols-2 gap-10 lg:px-8 px-3 mt-[2rem] lg:mt-0 md:px-20 pb-16">
         <div>
-          <h2 className="text-[48px] font-bold mb-4">Our Address:</h2>
-          <p className="text-[32px] w-[470px] font-medium mb-6">
+          <h2 className="lg:text-[48px] text-[30px] font-bold mb-4">Our Address:</h2>
+          <p className="text-[20px] lg:text-[32px] lg:w-[470px] w-full font-medium mb-6">
             Hopewell Adekunle, 0984 Place, Willout Estate, VI, Lagos
           </p>
 
           <h2 className="text-[48px] font-bold mb-4">Email:</h2>
-          <p className="text-[32px] w-[470px] font-medium mb-2">
+          <p className="lg:text-[32px] text-[20px] lg:w-[470px] w-full font-medium mb-2">
             For inquiries, feel free to email us at
             <a href="mailto:contact@frestar.com" className="font-bold">
               {" "}

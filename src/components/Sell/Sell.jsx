@@ -17,7 +17,7 @@ const carData = new Array(4).fill({
 
 const Sell = () => {
   return (
-    <div className="min-h-screen px-[5rem] py-10">
+    <div className="min-h-screen lg:px-[5rem] px-3 py-10">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-3xl font-bold text-[#0A1D56]">Our Collections</h2>
@@ -36,13 +36,13 @@ const Sell = () => {
         {carData.map((car, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-gray-200 flex flex-col gap-[12px] w-[315px] min-h-[356px] p-4 hover:shadow-md transition bg-white"
+            className="rounded-2xl border border-gray-200 flex w-full flex-col gap-[12px] lg:w-[315px] min-h-[356px] p-4 hover:shadow-md transition bg-white"
           >
             <div className="relative mb-4  rounded-xl w-full overflow-hidden">
               <img
                 src={car.image}
                 alt="Car"
-                className="w-[285px] h-40 object-cover"
+                className="lg:w-[285px] w-full lg:h-40 h-52 object-cover"
               />
               <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
                 Car

@@ -5,9 +5,9 @@ import Marquee from "react-fast-marquee";
 const Choose = () => {
   return (
     <div className="bg-[#EDF3FE] min-h-[713px] flex flex-col  gap-[64px] justify-center">
-      <div className="flex flex-col gap-[20px] px-[100px]">
-        <h2 className="text-[64px] font-bold">Why choose Frestar Autos</h2>
-        <p className="text-[32px] font-normal">
+      <div className="flex flex-col lg:gap-[20px] gap-[10px] lg:px-[100px] px-[20px]">
+        <h2 className="lg:text-[64px] text-[30px] font-bold">Why choose Frestar Autos</h2>
+        <p className="lg:text-[32px] text-[20px] font-normal">
           The curated marketplace for enthusiasts
         </p>
       </div>
