@@ -23,7 +23,7 @@ const SellHero = () => {
   const pathName = usePathname();
 
   return (
-    <div className="w-full flex items-center flex-col justify-center lg:px-[40px]">
+    <div className="w-full flex items-center flex-col justify-center">
       {/* Navigation */}
       <div className="flex w-full justify-between lg:items-start items-center bg-[#08225A] lg:h-[333px] py-[20px] px-0 lg:px-[5rem]">
         <div className="flex flex-row items-center justify-center w-full">
