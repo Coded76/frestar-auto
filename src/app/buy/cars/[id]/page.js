@@ -1,11 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Navbar from "@/app/Navbar";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function CarDetails() {
     const router = useRouter();
+    const [mainImage, setMainImage] = useState("/redCar.svg");
     const cars = [
         "/car1.svg",
         "/car2.svg",
@@ -13,6 +15,9 @@ export default function CarDetails() {
         "/car4.svg",
     ]
 
+    const handleThumbnailClick = (imagePath) => {
+        setMainImage(imagePath);
+    };
     return (
         <div>
             <Navbar />
@@ -24,14 +29,39 @@ export default function CarDetails() {
                     </button>
                     <div className="flex flex-col lg:flex-row gap-6">
                         <div className="flex-1">
-                            <img src="/redCar.svg" className="rounded-lg mb-4" />
-                            <div className="grid lg:grid-cols-5 grid-cols-2 gap-3 space-x-2">
-                                {cars.map((i) => (
-                                    <img
-                                        key={i}
-                                        src={i}
-                                        className="lg:w-[172px] w-full h-[125px] object-cover rounded cursor-pointer"
+                            <div className="relative h-[400px] w-full mb-4 overflow-hidden rounded-lg">
+                                <AnimatePresence mode="wait">
+                                    <motion.img
+                                        key={mainImage}
+                                        src={mainImage}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="absolute inset-0 w-full h-full object-cover"
+                                        alt="Main car image"
                                     />
+                                </AnimatePresence>
+                            </div>
+                            <div className="grid lg:grid-cols-5 grid-cols-2 gap-3">
+                                {cars.map((image) => (
+                                    <motion.div
+                                        key={image}
+                                        whileHover={{ scale: 1.03 }}
+                                        whileTap={{ scale: 0.98 }}
+                                    >
+                                        <Image
+                                            height={100}
+                                            width={100}
+                                            src={image}
+                                            onClick={() => handleThumbnailClick(image)}
+                                            className={`w-full h-[125px] object-cover rounded cursor-pointer transition-all duration-200 ${mainImage === image
+                                                ? "ring-4 ring-blue-500 scale-105"
+                                                : "hover:ring-2 hover:ring-blue-300"
+                                                }`}
+                                            alt="Car thumbnail"
+                                        />
+                                    </motion.div>
                                 ))}
                             </div>
                         </div>
