@@ -43,7 +43,7 @@ export default function CarDetails() {
                                     />
                                 </AnimatePresence>
                             </div>
-                            <div className="grid lg:grid-cols-5 grid-cols-2 gap-3">
+                            <div className="grid lg:grid-cols-4 grid-cols-2 gap-3">
                                 {cars.map((image) => (
                                     <motion.div
                                         key={image}
