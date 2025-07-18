@@ -82,7 +82,7 @@ const Collection = () => {
               </div>
             </div>
 
-            <button className="bg-gray-100 w-full py-2 rounded-xl text-sm text-[#0A1D56] font-medium hover:bg-[#0A1D56] hover:text-white transition">
+            <button className="bg-gray-100 w-full py-2 rounded-xl text-sm text-[#0A1D56] font-medium hover:text-white hover:bg-orange-400 transition">
               View Details
             </button>
           </div>

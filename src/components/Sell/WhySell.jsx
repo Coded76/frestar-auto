@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee'
 
 const WhySell = () => {
     return (
-        <div className='bg-[#EDF3FE] min-h-[713px] lg:px-[100px] mt-[2rem] px-[20px] flex flex-col  gap-[64px] justify-center'>
+        <div className='bg-[#EDF3FE] min-h-[713px] lg:px-[100px] px-[20px] flex flex-col  gap-[64px] justify-center'>
             <div className='flex flex-col gap-[10px] '>
                 <h2 className='lg:text-[64px] text-[30px] font-bold'>Why sell with Frestar Auto</h2>
                 <p className='lg:text-[32px] text-[20px] font-normal'>The curated marketplace for enthusiasts</p>

@@ -486,7 +486,7 @@ export default function Buy() {
                       </div>
                     </div>
                     <Link href={`/buy/cars/${idx}`}>
-                      <button className="mt-4 w-full bg-black text-white py-2 rounded-md text-sm hover:bg-gray-800 transition-colors">
+                      <button className="mt-4 w-full bg-[#F2F2F2] text-[#00143F] py-2 rounded-md hover:text-white text-sm hover:bg-orange-400 transition-colors">
                         View Details
                       </button>
                     </Link>
