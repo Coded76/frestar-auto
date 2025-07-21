@@ -91,10 +91,38 @@ const SellHero = () => {
               }`}
           >
             <ul className="flex flex-col gap-6">
-              <li>Home</li>
+              <Link href={"/"} className=" flex flex-col items-center">
+                <p>Home</p>
+                <div
+                  className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/" ? "block" : "hidden"
+                    }`}
+                ></div>
+              </Link>
+              <Link href={"/buy"} className=" flex flex-col items-center">
+                <p>Buy</p>
+                <div
+                  className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/buy" ? "block" : "hidden"
+                    }`}
+                ></div>
+              </Link>
+              <Link href={"/sell"} className=" flex flex-col items-center">
+                <p>Sell</p>
+                <div
+                  className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/sell" ? "block" : "hidden"
+                    }`}
+                ></div>
+              </Link>
+              <Link href={"/contact"} className=" flex flex-col items-center">
+                <p>Contact Us</p>
+                <div
+                  className={`w-[60px] h-[4px] bg-blue-800 ${pathName === "/contact" ? "block" : "hidden"
+                    }`}
+                ></div>
+              </Link>
+              {/* <li>Home</li>
               <li>Buy</li>
               <li>Sell</li>
-              <li>Contact Us</li>
+              <li>Contact Us</li> */}
             </ul>
             <button className="bg-[#F2F2F2] h-[40px] w-[106px] rounded-[8px] flex items-center gap-2 justify-center">
               <CiSearch /> Search
