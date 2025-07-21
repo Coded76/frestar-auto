@@ -9,9 +9,9 @@ const Footer = () => {
             </div>
             <footer className="bg-[#0D0D0D]  min-h-[463px] text-white w-full text-sm px-8 md:px-20 py-10">
                 <div className="flex flex-col lg:flex-row lg:justify-between gap-8 mb-6">
-                    <div className='w-[496px] flex flex-col gap-[20px]'>
+                    <div className='lg:w-[496px] flex flex-col w-full gap-[20px]'>
                         <img src="/logo.svg" alt="Frestar Logo" className="h-8 w-[198.5px] mb-4" />
-                        <p className='lg:w-[496px] w-full text-[#9E9FA4] font-light text-[16px] leading-[24px]'>
+                        <p className='lg:w-[496px] w-full text-[#9E9FA4] font-light text-[16px] lg:leading-[24px]'>
                             Frestar Digital is authorised and regulated by the Central Bank of Nigeria to offer banking services. Deposits are insured by the Nigerian Deposit Insurance Corporation (NDIC).
                         </p>
                     </div>
