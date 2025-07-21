@@ -41,13 +41,13 @@ const Collection = () => {
         {carData.map((car, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-gray-200 flex flex-col gap-[12px] w-[315px] min-h-[356px] p-4 hover:shadow-md transition bg-white"
+            className="group rounded-2xl border border-gray-200 flex flex-col gap-[12px] w-[315px] min-h-[356px] p-4 hover:shadow-md transition bg-white hover:scale-105 transition-transform duration-300"
           >
             <div className="relative mb-4  rounded-xl w-full overflow-hidden">
               <img
                 src={car.image}
                 alt="Car"
-                className="w-[285px] h-40 object-cover hover:scale-105 transition-transform duration-300"
+                className="w-[285px] h-40 object-cover"
               />
               <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">
                 Car
@@ -82,7 +82,7 @@ const Collection = () => {
               </div>
             </div>
 
-            <button className="bg-gray-100 w-full py-2 rounded-xl text-sm text-[#0A1D56] font-medium hover:text-white hover:bg-orange-400 transition">
+            <button className="bg-gray-100 w-full py-2 rounded-xl text-sm text-[#0A1D56] font-medium transition group-hover:text-white group-hover:bg-orange-500">
               View Details
             </button>
           </div>
